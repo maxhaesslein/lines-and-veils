@@ -1,0 +1,40 @@
+
+:root {
+	--color-border: #ddd;
+	--color-hover: #efefef;
+}
+
+table {
+	table-layout: fixed;
+	border-collapse: collapse;
+	border: 2px solid var(--color-border);
+}
+
+td,
+th {
+	text-align: center;
+	padding: 5px;
+	border: 1px solid var(--color-border);
+}
+
+	td.topic,
+	th.topic {
+		text-align: left;
+	}
+
+tr:hover td {
+	background: var(--color-hover);
+}
+
+.submit {
+	text-align: left;
+}
+
+.topic.new {
+
+}
+
+	.topic.new input {
+		width: calc(100% - 100px);
+		min-width: 200px;
+	}
