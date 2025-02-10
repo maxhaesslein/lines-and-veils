@@ -2,7 +2,7 @@
 
 if( ! defined('TTRPG-LV') ) exit;
 
-$version = '0.1';
+$version = '0.2';
 
 
 $group = $_REQUEST['group'] ?? false;
