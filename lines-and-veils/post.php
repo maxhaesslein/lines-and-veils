@@ -25,6 +25,13 @@ foreach( $_POST as $key => $value ) {
 
 	$name = $_POST[$key];
 
+	$original_value = $topics[$name] ?? false;
+	if( $original_value === 'veil' && $value === 'okay' ) {
+		$value = 'veil';
+	} elseif( $original_value === 'line' && $value !== 'line' ) {
+		$value = 'line';
+	}
+
 	$data[$name] = $value;
 }
 
