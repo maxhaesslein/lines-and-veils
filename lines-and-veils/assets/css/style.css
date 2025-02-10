@@ -2,6 +2,7 @@
 :root {
 	--color-border: #ddd;
 	--color-hover: #efefef;
+	--color-edited: #ffa;
 }
 
 table {
@@ -24,6 +25,10 @@ th {
 
 tr:hover td {
 	background: var(--color-hover);
+}
+
+tr.edited td {
+	background: var(--color-edited);
 }
 
 .submit {
