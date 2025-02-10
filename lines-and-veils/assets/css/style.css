@@ -43,3 +43,12 @@ tr.edited td {
 		width: calc(100% - 100px);
 		min-width: 200px;
 	}
+
+tr.state-veil {
+	font-style: italic;
+}
+
+tr.state-line {
+	font-style: italic;
+	font-weight: bold;
+}

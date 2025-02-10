@@ -7,7 +7,12 @@
 		for( var input of document.querySelectorAll('input[type="radio"]') ) {
 			input.addEventListener('change', function(){
 				isModified = true;
-				this.closest('tr').classList.add('edited');
+
+				var tr = this.closest('tr');
+
+				tr.classList.add('edited');
+				tr.classList.remove('state-okay', 'state-veil', 'state-line');
+				tr.classList.add('state-'+this.value);
 			});
 		}
 

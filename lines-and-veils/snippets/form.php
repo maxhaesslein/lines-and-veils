@@ -69,7 +69,7 @@ if( ! defined('TTRPG-LV') ) exit;
 
 		?>
 		<input type="hidden" name="<?= $id ?>" value="<?= sanitize_title($topic, false) ?>">
-		<tr>
+		<tr class="state-<?= $value ?>">
 			<td class="line"><input type="radio" name="topic_<?= $id ?>" title="Line" value="line" <?= $line_checked ?> <?= $line_disabled ?>></td>
 			<td class="veil"><input type="radio" name="topic_<?= $id ?>" title="Veil" value="veil" <?= $veil_checked ?> <?= $veil_disabled ?>></td>
 			<td class="okay"><input type="radio" name="topic_<?= $id ?>" title="Okay" value="okay" <?= $okay_checked ?> <?= $okay_disabled ?>></td>
