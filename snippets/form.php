@@ -70,25 +70,28 @@ if( ! defined('TTRPG-LV') ) exit;
 		?>
 		<input type="hidden" name="<?= $id ?>" value="<?= sanitize_title($topic, false) ?>">
 		<tr class="state-<?= $value ?>">
-			<td class="line"><input type="radio" name="topic_<?= $id ?>" title="Line" value="line" <?= $line_checked ?> <?= $line_disabled ?>></td>
-			<td class="veil"><input type="radio" name="topic_<?= $id ?>" title="Veil" value="veil" <?= $veil_checked ?> <?= $veil_disabled ?>></td>
-			<td class="okay"><input type="radio" name="topic_<?= $id ?>" title="Okay" value="okay" <?= $okay_checked ?> <?= $okay_disabled ?>></td>
+			<td class="line"><label><input type="radio" name="topic_<?= $id ?>" title="Line" value="line" <?= $line_checked ?> <?= $line_disabled ?>></label></td>
+			<td class="veil"><label><input type="radio" name="topic_<?= $id ?>" title="Veil" value="veil" <?= $veil_checked ?> <?= $veil_disabled ?>></label></td>
+			<td class="okay"><label><input type="radio" name="topic_<?= $id ?>" title="Okay" value="okay" <?= $okay_checked ?> <?= $okay_disabled ?>></label></td>
 			<td class="topic"><?= $topic ?></td>
 		</tr>
 		<?php
 	}
 	?>
 
-	<tr id="new-topic-line">
-		<td class="new topic" colspan="4">
-			<input type="text" id="new-topic" name="new" value="" placeholder="Thema"><button id="add-topic">hinzufügen</button>
-		</td>
-	</tr>
-
-	<tr>
-		<td colspan="4" class="submit">
-			<button>Absenden</button>
-		</td>
-	</tr>
+	<tfoot>
+		<tr id="new-topic-line">
+			<th class="new topic" colspan="4">
+				<span class="new-form-wrapper">
+					<input type="text" id="new-topic" name="new" value="" placeholder="Thema"><button id="add-topic">hinzufügen</button>
+				</span>
+			</th>
+		</tr>
+		<tr>
+			<th colspan="4" class="submit">
+				<button>Absenden</button>
+			</th>
+		</tr>
+	</tfoot>
 
 </form>
