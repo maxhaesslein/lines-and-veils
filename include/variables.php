@@ -26,10 +26,8 @@ if( $group ) {
 }
 
 
-$server_name = $_SERVER['SERVER_NAME'] ?? '';
-
 $debug = false;
-if( $server_name === 'local.maxhaessle.in' || $server_name === 'preview.npi.re' ) {
+if( isset($_SERVER['LOCAL_DEV']) ) {
 	$debug = true;
 }
 
