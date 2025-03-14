@@ -2,7 +2,7 @@
 
 if( ! defined('LINESANDVEILS') ) exit;
 
-$version = '0.3';
+$version = '1.0.0';
 
 
 $lang = $options['language'] ?? 'en';
