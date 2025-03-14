@@ -7,6 +7,7 @@ if( ! defined('LINESANDVEILS') ) exit;
 <ul>
 	<li><strong><?= __('Line') ?>:</strong> <?= __('these themes should not be in the game' ) ?></li>
 	<li><strong><?= __('Veil') ?>:</strong> <?= __('these themes may occur in the game, but happen "off-screen" without description') ?></li>
+	<li><strong><?= __('Not my character') ?>:</strong> <?= __('these themes may occur in the game, but don\' happen to my character') ?></li>
 	<li><strong><?= __('Okay') ?>:</strong> <?= __('these topics may be included and described in the game (but don\'t have to be)') ?></li>
 </ul>
 
@@ -35,6 +36,9 @@ if( ! defined('LINESANDVEILS') ) exit;
 					<?= __('Veil') ?>
 				</th>
 				<th>
+					<?= __('Not my character') ?>
+				</th>
+				<th>
 					<?= __('Okay') ?>
 				</th>
 				<th class="topic">
@@ -50,18 +54,25 @@ if( ! defined('LINESANDVEILS') ) exit;
 
 		$line_checked = '';
 		$veil_checked = '';
+		$nmc_checked = '';
 		$okay_checked = '';
 
 		$line_disabled = '';
 		$veil_disabled = '';
+		$nmc_disabled = '';
 		$okay_disabled = '';
 
 		if( $value == 'line' ) {
 			$line_checked = 'checked';
 			$veil_disabled = 'disabled';
+			$nmc_disabled = 'disabled';
 			$okay_disabled = 'disabled';
 		} elseif( $value == 'veil' ) {
 			$veil_checked = 'checked';
+			$nmc_disabled = 'disabled';
+			$okay_disabled = 'disabled';
+		} elseif( $value == 'not-my-char' ) {
+			$nmc_checked = 'checked';
 			$okay_disabled = 'disabled';
 		} else {
 			$okay_checked = 'checked';
@@ -72,6 +83,7 @@ if( ! defined('LINESANDVEILS') ) exit;
 		<tr class="state-<?= $value ?>">
 			<td class="line"><label><input type="radio" name="topic_<?= $id ?>" title="<?= __('Line') ?>" value="line" <?= $line_checked ?> <?= $line_disabled ?>></label></td>
 			<td class="veil"><label><input type="radio" name="topic_<?= $id ?>" title="<?= __('Veil') ?>" value="veil" <?= $veil_checked ?> <?= $veil_disabled ?>></label></td>
+			<td class="nmc"><label><input type="radio" name="topic_<?= $id ?>" title="<?= __('Not my character') ?>" value="not-my-char" <?= $nmc_checked ?> <?= $nmc_disabled ?>></label></td>
 			<td class="okay"><label><input type="radio" name="topic_<?= $id ?>" title="<?= __('Okay') ?>" value="okay" <?= $okay_checked ?> <?= $okay_disabled ?>></label></td>
 			<td class="topic"><?= $topic ?></td>
 		</tr>
@@ -81,14 +93,14 @@ if( ! defined('LINESANDVEILS') ) exit;
 
 	<tfoot>
 		<tr id="new-topic-line">
-			<th class="new topic" colspan="4">
+			<th class="new topic" colspan="5">
 				<span class="new-form-wrapper">
 					<input type="text" id="new-topic" name="new" value="" placeholder="<?= __('Theme') ?>"><button id="add-topic"><?= __('add') ?></button>
 				</span>
 			</th>
 		</tr>
 		<tr>
-			<th colspan="4" class="submit">
+			<th colspan="5" class="submit">
 				<button><?= __('send') ?></button>
 			</th>
 		</tr>

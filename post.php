@@ -21,14 +21,16 @@ foreach( $_POST as $key => $value ) {
 
 	if( ! str_starts_with($key, 'topic_') ) continue;
 
-	if( ! in_array($value, ['okay','veil','line']) ) continue;
+	if( ! in_array($value, ['okay','veil','line', 'not-my-char']) ) continue;
 
 	$key = str_replace('topic_','',$key);
 
 	$name = $_POST[$key];
 
 	$original_value = $topics[$name] ?? false;
-	if( $original_value === 'veil' && $value === 'okay' ) {
+	if( $original_value === 'veil' && ( $value === 'okay' || $value === 'not-my-char' ) ) {
+		$value = 'veil';
+	} elseif( $original_value === 'not-my-char' && $value === 'okay' ) {
 		$value = 'veil';
 	} elseif( $original_value === 'line' && $value !== 'line' ) {
 		$value = 'line';

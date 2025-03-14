@@ -39,6 +39,7 @@ th {
 
 td.veil,
 td.line,
+td.nmc,
 td.okay {
 	padding: 0;
 	width: 50px;
@@ -98,7 +99,8 @@ tfoot th {
 		margin-right: 5px;
 	}
 
-tr.state-veil {
+tr.state-veil,
+tr.state-not-my-char {
 	font-style: italic;
 }
 

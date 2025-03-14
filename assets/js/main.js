@@ -11,7 +11,7 @@
 				var tr = this.closest('tr');
 
 				tr.classList.add('edited');
-				tr.classList.remove('state-okay', 'state-veil', 'state-line');
+				tr.classList.remove('state-okay', 'state-veil', 'state-line', 'state-nmc');
 				tr.classList.add('state-'+this.value);
 			});
 		}
@@ -34,7 +34,7 @@
 
 				var id = topic.toLowerCase().replace(' ', '_').replace(/[^a-z0-9_]+/g, "");
 
-				var newHTML = '<input type="hidden" name="'+id+'" value="'+topic+'"><tr class="edited"><td class="line"><label><input type="radio" name="topic_'+id+'" title="Line" value="line"></label></td><td class="veil"><label><input type="radio" name="topic_'+id+'" title="Veil" value="veil"></label></td><td class="okay"><label><input type="radio" name="topic_'+id+'" title="Okay" value="okay" checked></label></td><td class="topic">'+topic+'</td></tr>';
+				var newHTML = '<input type="hidden" name="'+id+'" value="'+topic+'"><tr class="edited"><td class="line"><label><input type="radio" name="topic_'+id+'" title="Line" value="line"></label></td><td class="veil"><label><input type="radio" name="topic_'+id+'" title="Veil" value="veil"></label></td><td class="nmc"><label><input type="radio" name="topic_'+id+'" title="Not my character" value="not-my-char"></label></td><td class="okay"><label><input type="radio" name="topic_'+id+'" title="Okay" value="okay" checked></label></td><td class="topic">'+topic+'</td></tr>';
 
 				var emptySpace = document.getElementById('new-topic-line');
 				emptySpace.insertAdjacentHTML('beforebegin', newHTML);
