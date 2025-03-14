@@ -3,7 +3,9 @@
 define( 'TTRPG-LV', 'view' );
 
 include_once('include/helper.php');
+include_once('include/config.php');
 include_once('include/variables.php');
+include_once('include/language.php');
 
 include_once('snippets/head.php');
 ?>

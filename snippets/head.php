@@ -3,7 +3,7 @@
 if( ! defined('TTRPG-LV') ) exit;
 
 ?><!DOCTYPE html>
-<html lang="de-DE">
+<html lang="<?= $locale_code ?>">
 <head>
 	<meta charset="utf-8">
 
@@ -15,13 +15,6 @@ if( ! defined('TTRPG-LV') ) exit;
 
 	<meta name="version" content="<?= $version ?>">
 
-	<?php /* ?>
-	<link rel="icon" type="image/png" href="<?= $favicon_path ?>favicon-96x96.png" sizes="96x96" />
-	<link rel="shortcut icon" href="<?= $favicon_path ?>favicon.ico" />
-	<link rel="apple-touch-icon" sizes="180x180" href="<?= $favicon_path ?>apple-touch-icon.png" />
-	</php */ ?>
-
-	<?php /* <link rel="stylesheet" href="assets/css/fonts.css?v1" type="text/css" media="all"> */ ?>
 	<link rel="stylesheet" href="assets/css/style.css?v=<?= $version ?>" type="text/css" media="all">
 
 	<script type="text/javascript" src="assets/js/main.js?v=<?= $version ?>"></script>

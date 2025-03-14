@@ -5,6 +5,8 @@ if( ! defined('TTRPG-LV') ) exit;
 $version = '0.3';
 
 
+$lang = $options['language'] ?? 'en';
+
 $group = $_REQUEST['group'] ?? false;
 
 

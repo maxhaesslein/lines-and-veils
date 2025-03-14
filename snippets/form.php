@@ -5,9 +5,9 @@ if( ! defined('TTRPG-LV') ) exit;
 ?>
 
 <ul>
-	<li><strong>Line:</strong> diese Themen sollten im dem Spiel nicht vorkommen</li>
-	<li><strong>Veil:</strong> diese Themen dürfen im Spiel vorkommen, passieren aber "Off-Screen" ohne Beschreibung</li>
-	<li><strong>Okay:</strong> diese Themen dürfen im Spiel vorkommen und beschrieben werden (müssen aber nicht)</li>
+	<li><strong><?= __('Line') ?>:</strong> <?= __('these themes should not be in the game' ) ?></li>
+	<li><strong><?= __('Veil') ?>:</strong> <?= __('these themes may occur in the game, but happen "off-screen" without description') ?></li>
+	<li><strong><?= __('Okay') ?>:</strong> <?= __('these topics may be included and described in the game (but don\'t have to be)') ?></li>
 </ul>
 
 <form id="lv-form" action="post.php" method="POST">
@@ -29,16 +29,16 @@ if( ! defined('TTRPG-LV') ) exit;
 		<thead>
 			<tr>
 				<th>
-					Line
+					<?= __('Line') ?>
 				</th>
 				<th>
-					Veil
+					<?= __('Veil') ?>
 				</th>
 				<th>
-					Okay
+					<?= __('Okay') ?>
 				</th>
 				<th class="topic">
-					Thema
+					<?= __('Theme') ?>
 				</th>
 			</tr>
 		</thead>
@@ -70,9 +70,9 @@ if( ! defined('TTRPG-LV') ) exit;
 		?>
 		<input type="hidden" name="<?= $id ?>" value="<?= sanitize_title($topic, false) ?>">
 		<tr class="state-<?= $value ?>">
-			<td class="line"><label><input type="radio" name="topic_<?= $id ?>" title="Line" value="line" <?= $line_checked ?> <?= $line_disabled ?>></label></td>
-			<td class="veil"><label><input type="radio" name="topic_<?= $id ?>" title="Veil" value="veil" <?= $veil_checked ?> <?= $veil_disabled ?>></label></td>
-			<td class="okay"><label><input type="radio" name="topic_<?= $id ?>" title="Okay" value="okay" <?= $okay_checked ?> <?= $okay_disabled ?>></label></td>
+			<td class="line"><label><input type="radio" name="topic_<?= $id ?>" title="<?= __('Line') ?>" value="line" <?= $line_checked ?> <?= $line_disabled ?>></label></td>
+			<td class="veil"><label><input type="radio" name="topic_<?= $id ?>" title="<?= __('Veil') ?>" value="veil" <?= $veil_checked ?> <?= $veil_disabled ?>></label></td>
+			<td class="okay"><label><input type="radio" name="topic_<?= $id ?>" title="<?= __('Okay') ?>" value="okay" <?= $okay_checked ?> <?= $okay_disabled ?>></label></td>
 			<td class="topic"><?= $topic ?></td>
 		</tr>
 		<?php
@@ -83,13 +83,13 @@ if( ! defined('TTRPG-LV') ) exit;
 		<tr id="new-topic-line">
 			<th class="new topic" colspan="4">
 				<span class="new-form-wrapper">
-					<input type="text" id="new-topic" name="new" value="" placeholder="Thema"><button id="add-topic">hinzufügen</button>
+					<input type="text" id="new-topic" name="new" value="" placeholder="<?= __('Theme') ?>"><button id="add-topic"><?= __('add') ?></button>
 				</span>
 			</th>
 		</tr>
 		<tr>
 			<th colspan="4" class="submit">
-				<button>Absenden</button>
+				<button><?= __('send') ?></button>
 			</th>
 		</tr>
 	</tfoot>
