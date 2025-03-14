@@ -1,6 +1,6 @@
 <?php
 
-define( 'TTRPG-LV', 'post' );
+define( 'LINESANDVEILS', 'post' );
 
 include_once('include/helper.php');
 include_once('include/config.php');

@@ -1,6 +1,6 @@
 <?php
 
-if( ! defined('TTRPG-LV') ) exit;
+if( ! defined('LINESANDVEILS') ) exit;
 
 ?>
 
@@ -15,9 +15,9 @@ if( ! defined('TTRPG-LV') ) exit;
 	<?php
 
 	if( ! empty($_REQUEST['error']) ) {
-		echo '<p style="color: red;"><strong>Fehler</strong> beim speichern :( -- '.$_REQUEST['error'].'</p>';
+		echo '<p style="color: red;"><strong>'.__('Error').'</strong> '.__('while saving').' :( -- '.$_REQUEST['error'].'</p>';
 	} elseif( isset($_REQUEST['success']) ) {
-		echo '<p style="color: green;"><strong>Erfolgreich gespeichert</strong></p>';
+		echo '<p style="color: green;"><strong>'.__('Successfully saved').'</strong></p>';
 	}
 
 	?>

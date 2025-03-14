@@ -1,6 +1,6 @@
 <?php
 
-if( ! defined('TTRPG-LV') ) exit;
+if( ! defined('LINESANDVEILS') ) exit;
 
 
 $options_default = [
