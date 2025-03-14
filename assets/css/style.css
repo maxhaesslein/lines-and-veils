@@ -1,13 +1,22 @@
 
 :root {
+	--font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 	--color-form-border: #999;
 	--color-border: #ddd;
 	--color-hover: #efefef;
-	--color-edited: #ffa;
+	--color-edited: #ff9;
 }
 
 body {
 	padding-bottom: 80px;
+	font-family: var(--font-family);
+}
+
+main {
+	margin: 0 auto;
+	width: fit-content;
+	max-width: 100%;
 }
 
 table {
