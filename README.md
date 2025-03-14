@@ -1,3 +1,7 @@
 # Lines & Veils
 
-A website to manage a "Lines & Veils" list for one or more TTRPG groups.
+Manage "Lines & Veils" lists for TTRPG groups
+
+## Installation
+
+Copy all files into a folder on your webserver. Requires PHP 8.0 or greater.
